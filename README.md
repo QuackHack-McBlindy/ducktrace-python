@@ -88,14 +88,14 @@ nix build
 import ducktrace
 
 # Initialise logging (reads DT_LOG_LEVEL, DT_LOG_PATH, DT_LOG_FILE)
-ducktrace.setup_ducktrace_logging()
+ducktrace.dt_setup()
 
 ducktrace.dt_info("Application started")
 ducktrace.dt_debug("This is a debug message")
 ducktrace.dt_error("Something went wrong")
 
 # Timing decorator
-@ducktrace.timed_function()
+@ducktrace.dt_timer()
 def slow_function():
     time.sleep(1)
 
