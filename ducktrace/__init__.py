@@ -10,7 +10,7 @@ from .logger import (
     dt_error,
     dt_critical,
     dt_timer,
-    TranscriptionTimer,
+    PerformanceTimer,
 )
 
 __all__ = [
@@ -21,5 +21,5 @@ __all__ = [
     "dt_error",
     "dt_critical",
     "dt_timer",
-    "TranscriptionTimer",
+    "PerformanceTimer",
 ]

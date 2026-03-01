@@ -17,7 +17,7 @@ A duck‑themed logging system for Python, with colourful console output and aut
 
 - **📁 Respects `DT_LOG_LEVEL` and `DT_LOG_FILE` environment variables**
 
-- **⏱️ Includes a `timed_function` decorator and `TranscriptionTimer` context manager for performance measurement**
+- **⏱️ Includes a `dt_timer` decorator and `PerformanceTimer` context manager for performance measurement**
 
 - **🛠️ Simple `dt_debug`, `dt_info`, … functions for quick logging**
 
@@ -102,7 +102,7 @@ def slow_function():
 slow_function()
 
 # Context manager timer
-with ducktrace.TranscriptionTimer("database query") as timer:
+with ducktrace.PerformanceTimer("database query") as timer:
     # … some work …
     timer.lap("after connect")
     # … more work …

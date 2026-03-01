@@ -49,7 +49,7 @@ class DuckTraceFormatter(logging.Formatter):
         return formatted
 
 
-def setup_ducktrace_logging(name: Optional[str] = None,
+def dt_setup(name: Optional[str] = None,
                             level: Optional[str] = None) -> logging.Logger:
     """
     Configure the ducktrace logger.
@@ -144,11 +144,11 @@ def dt_timer(func_name: Optional[str] = None) -> Callable:
     return decorator
 
 
-class TranscriptionTimer:
+class PerformanceTimer:
     """
     A context manager for timing blocks of code.
     Usage:
-        with TranscriptionTimer("my operation") as timer:
+        with PerformanceTimer("my operation") as timer:
             ... do work ...
             timer.lap("first part")
     """
